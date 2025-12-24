@@ -1,0 +1,27 @@
+/**
+ * For more details on how to configure Wrangler, refer to:
+ * https://developers.cloudflare.com/workers/wrangler/configuration/
+ */
+{
+	"$schema": "node_modules/wrangler/config-schema.json",
+	"name": "dev-frk-rummy-d1-rest",
+	"main": "src/index.ts",
+	"compatibility_date": "2025-03-03",
+    "d1_databases": [
+        {
+          "binding": "DB",
+          "database_name": "dev_frk_rummy",
+          "database_id": "9ff1871a-c53a-4924-9e48-de9b231218c5"
+        }
+    ],
+    "secrets_store_secrets": [
+        {
+            "store_id": "c36d92fd13a94d35b95eeae99d44d235",
+            "binding": "SECRET",
+            "secret_name": "06ae4d8f-ffea-4bc5-b4fc-3bf70e75d5b6"
+        }
+    ],
+	"observability": {
+		"enabled": true
+	}
+}
